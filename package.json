@@ -1,14 +1,12 @@
 {
-  "homepage": "https://msowers72.github.io/Pet-Application",
   "name": "adopt-me-v3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "vite build",
+    "build:digitalocean": "npm install --production=false && npm run build && npm ci",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
